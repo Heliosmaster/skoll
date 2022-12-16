@@ -1,0 +1,10 @@
+{:deps {io.github.nextjournal/clerk {:mvn/version "0.12.707"}
+        org.clojure/data.csv {:mvn/version "1.0.1"}}
+ :aliases {:nextjournal/clerk
+           {:exec-fn nextjournal.clerk/build!
+            :exec-args {:paths ["src/index.clj"]}
+            ;; TODO: add all notebooks you want to have built ☝️
+            ;; if you just want to build one notebook, set `:index`
+
+            ;; optional list of aliases to include in the build
+            :nextjournal.clerk/aliases [:dev]}}}
